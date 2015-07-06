@@ -1,4 +1,6 @@
-package com.infoeducatie.app.client.main;
+package com.infoeducatie.app;
+
+import com.infoeducatie.app.client.main.HttpHelper;
 
 import java.net.HttpURLConnection;
 

@@ -10,11 +10,11 @@ import java.util.List;
  * Created by Browsing on 7/7/2015.
  */
 public class NewsManagement {
-    public News[] getAllNews() {
+    public static News[] getAllNews() {
         return ServiceLocator.getInstance().getClient().doGetRequest("news.json", News[].class);
     }
 
-    public News[] filterNews(News[] newsArray, boolean isPinned) {
+    public static  News[] filterNews(News[] newsArray, boolean isPinned) {
          /* create a list, and later switch it to an array */
         List<News> newsList = new ArrayList<News>();
         for (News news : newsArray) {

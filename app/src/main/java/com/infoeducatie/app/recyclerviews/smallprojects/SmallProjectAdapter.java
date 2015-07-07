@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.client.entities.Project;
+import com.infoeducatie.app.service.management.ProjectsManagement;
+import com.squareup.picasso.Picasso;
 
 /**
  * Created by Browsing on 7/7/2015.
@@ -38,8 +40,13 @@ public class SmallProjectAdapter extends RecyclerView.Adapter<SmallProjectViewHo
     public void onBindViewHolder(SmallProjectViewHolder holder, int position) {
      /* bind the viewholder item */
         holder.title.setText(projects[position].getTitle());
-        holder.participants.setText("Nr:" + projects[position].getContestants().size());
+        holder.participants.setText(ProjectsManagement.getParticipantsFromProject(projects[position]));
         holder.countycategory.setText(projects[position].getCounty() + " " + projects[position].getCategory());
+        Picasso.with(holder.image.getContext())
+                .load(projects[position].getScreenshots().get(0).getUrl())
+                .placeholder(R.drawable.loading)
+                .error(R.drawable.error)
+                .into(holder.image);
     }
 
     @Override

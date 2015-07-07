@@ -9,6 +9,7 @@ import com.infoeducatie.app.R;
 import com.infoeducatie.app.helpers.FontHelper;
 import com.infoeducatie.app.ui.CircularImageView;
 import com.infoeducatie.app.ui.RoundedImageView;
+import com.squareup.picasso.Picasso;
 
 /**
  * Created by Browsing on 7/7/2015.
@@ -29,5 +30,6 @@ public class SmallProjectViewHolder extends RecyclerView.ViewHolder {
         title.setTypeface(FontHelper.LATO_REGULAR);
         participants.setTypeface(FontHelper.LATO_REGULAR);
         countycategory.setTypeface(FontHelper.LATO_REGULAR);
+
     }
 }

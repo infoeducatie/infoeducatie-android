@@ -1,17 +1,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
 
-
     <fragment
+        android:id="@+id/fragment2"
+        android:name="com.infoeducatie.app.fragments.ProjectsFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.infoeducatie.app.fragments.HomeFragment"
-        android:id="@+id/fragment"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_height="match_parent" />
 
 </RelativeLayout>

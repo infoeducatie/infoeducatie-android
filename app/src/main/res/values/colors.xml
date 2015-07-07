@@ -7,8 +7,10 @@
     <color name="home_fragment_text_secondary">#ffc000</color>
 
     <color name="item_project_small_text_primary">#ffffff</color>
+    <color name="item_project_small_divider">#ffffff</color>
 
     <color name="projects_fragment_background">#116c8d</color>
+
 
 
 </resources>

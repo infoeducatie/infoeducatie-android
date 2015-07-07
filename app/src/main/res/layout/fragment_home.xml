@@ -7,13 +7,14 @@
     tools:context="com.infoeducatie.app.fragments.HomeFragment">
 
     <TextView
+        android:id="@+id/fragment_home_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:text="InfoEducatie"
         android:textColor="@color/home_fragment_text_primary"
-        android:textSize="40sp" />
+        android:textSize="60sp" />
 
     <TextView
         android:id="@+id/fragment_home_motto"
@@ -21,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="20dp"
-        android:text="Perseverează, mergi mai departe!"
+        android:text=""
         android:textColor="@color/home_fragment_text_primary"
         android:textSize="20sp" />
 
@@ -39,11 +40,11 @@
             android:orientation="vertical">
 
             <TextView
-
+                android:id="@+id/fragment_home_participants_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="PARTICIPANTI"
+                android:text="@string/msg_participants_caps"
                 android:textColor="@color/home_fragment_text_primary"
                 android:textSize="18sp" />
 
@@ -52,9 +53,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="12"
+                android:text="0"
                 android:textColor="@color/home_fragment_text_secondary"
-                android:textSize="50sp" />
+                android:textSize="65sp" />
 
         </LinearLayout>
 
@@ -64,21 +65,26 @@
             android:layout_gravity="center"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
+            android:alpha="0.3"
             android:background="@color/home_fragment_text_primary" />
 
         <LinearLayout
             android:layout_width="0dp"
+
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="@drawable/selector_fragment_home_tab"
+            android:clickable="true"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/fragment_home_projects_title"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="PROIECTE"
+                android:text="@string/msg_projects_caps"
                 android:textColor="@color/home_fragment_text_primary"
                 android:textSize="18sp" />
 
@@ -87,9 +93,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="12"
+                android:text="0"
                 android:textColor="@color/home_fragment_text_secondary"
-                android:textSize="50sp" />
+                android:textSize="65sp" />
 
         </LinearLayout>
 
@@ -99,6 +105,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
+            android:alpha="0.3"
             android:background="@color/home_fragment_text_primary" />
 
         <LinearLayout
@@ -109,11 +116,12 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/fragment_home_counties_title"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="JUDEȚE"
+                android:text="@string/msg_counties_caps"
                 android:textColor="@color/home_fragment_text_primary"
                 android:textSize="18sp" />
 
@@ -122,9 +130,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="12"
+                android:text="0"
                 android:textColor="@color/home_fragment_text_secondary"
-                android:textSize="50sp" />
+                android:textSize="65sp" />
 
         </LinearLayout>
 
@@ -138,7 +146,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:paddingBottom="10dp"
-        android:text="Editia 2015"
+        android:text=""
         android:textColor="@color/home_fragment_text_primary"
         android:textSize="20sp" />
 </LinearLayout>

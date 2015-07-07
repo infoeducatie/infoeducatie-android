@@ -6,4 +6,9 @@
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="msg_con_error">Connection error</string>
+    <string name="msg_edition">Ediția</string>
+    <string name="msg_participants_caps">PARTICIPANTI</string>
+    <string name="msg_projects_caps">PROIECTE</string>
+    <string name="msg_counties_caps">JUDEȚE</string>
 </resources>

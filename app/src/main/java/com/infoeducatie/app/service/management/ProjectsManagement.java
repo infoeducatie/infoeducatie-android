@@ -49,6 +49,15 @@ public class ProjectsManagement {
         return result;
     }
 
+    /* this method will return the county and category in one string */
+    public static String getCountyAndCategoryString(Project project) {
+        /* make the first letter uppercase */
+        String category = project.getCategory().name().charAt(0) + "";
+        category = category.toUpperCase();
+        category = category + project.getCategory().name().substring(1, project.getCategory().name().length());
+        return project.getCounty() + " / " + category;
+    }
+
     /* example */
     public static void main(String[] args) {
         Client client = new Client();

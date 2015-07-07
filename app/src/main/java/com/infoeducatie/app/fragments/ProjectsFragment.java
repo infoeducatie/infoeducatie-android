@@ -1,7 +1,6 @@
 package com.infoeducatie.app.fragments;
 
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -51,7 +50,7 @@ public class ProjectsFragment extends Fragment {
         mAdapter.setProjects(mDisplayProjects);
         mRecycler.setAdapter(mAdapter);
         /**/
-        loadAllProjects();
+        refreshProjects();
         return view;
     }
 
@@ -60,7 +59,7 @@ public class ProjectsFragment extends Fragment {
         mAdapter.setProjects(mDisplayProjects);
     }
 
-    private void loadAllProjects() {
+    public void refreshProjects() {
         AsyncTaskHelper.create(new AsyncTaskHelper.AsyncMethods<Project[]>() {
             @Override
             public Project[] doInBackground() {

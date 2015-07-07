@@ -1,6 +1,35 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".HomeActivity">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomeActivity">
+    <item
+        android:id="@+id/action_all"
+        android:orderInCategory="100"
+        android:title="Toate"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_web"
+        android:orderInCategory="100"
+        android:title="Web"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_educational"
+        android:orderInCategory="100"
+        android:title="Educațional"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_utilitar"
+        android:orderInCategory="100"
+        android:title="Utilitar"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_robots"
+        android:orderInCategory="100"
+        android:title="Roboți"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_media"
+        android:orderInCategory="100"
+        android:title="Multimedia"
+        app:showAsAction="never" />
 </menu>

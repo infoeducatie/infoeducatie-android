@@ -23,6 +23,9 @@ public class ProjectsManagement {
      */
     public static Project[] filterProjects(Project[] projects,
                                            ProjectCategory category) {
+        if (category == ProjectCategory.all) {
+            return projects;
+        }
         /* create a list, and later switch it to an array */
         List<Project> projectsList = new ArrayList<Project>();
         for (Project project : projects) {

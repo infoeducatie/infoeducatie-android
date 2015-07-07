@@ -47,4 +47,17 @@ public class ProjectManagementTest extends ApplicationTestCase<Application> {
         project.setCategory(ProjectCategory.utilitar);
         assertTrue(ProjectsManagement.getCountyAndCategoryString(project).equals("Brasov / Utilitar"));
     }
+
+    public void testFilterProjects() {
+        Project project1 = new Project(), project2 = new Project(), project3 = new Project();
+        project1.setCategory(ProjectCategory.educational);
+        project2.setCategory(ProjectCategory.educational);
+        project3.setCategory(ProjectCategory.utilitar);
+
+        Project[] projects = new Project[]{project1, project2, project3};
+
+        assertTrue(ProjectsManagement.filterProjects(projects, ProjectCategory.utilitar).length == 1);
+        assertTrue(ProjectsManagement.filterProjects(projects, ProjectCategory.educational).length == 2);
+        assertTrue(ProjectsManagement.filterProjects(projects, ProjectCategory.all).length == 3);
+    }
 }

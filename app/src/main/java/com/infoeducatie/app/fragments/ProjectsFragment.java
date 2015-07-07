@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.client.entities.Project;
+import com.infoeducatie.app.client.entities.ProjectCategory;
 import com.infoeducatie.app.helpers.AsyncTaskHelper;
 import com.infoeducatie.app.recyclerviews.smallprojects.SmallProjectAdapter;
 import com.infoeducatie.app.service.management.ProjectsManagement;
@@ -22,7 +23,11 @@ import com.infoeducatie.app.service.management.ProjectsManagement;
 public class ProjectsFragment extends Fragment {
 
 
+    /* all the projects */
     private Project[] mAllProjects = new Project[0];
+    /* the projects displayed in the adapter */
+    private Project[] mDisplayProjects = new Project[0];
+
     private SmallProjectAdapter mAdapter;
     private RecyclerView mRecycler;
 
@@ -42,11 +47,16 @@ public class ProjectsFragment extends Fragment {
         mRecycler = (RecyclerView) view.findViewById(R.id.fragment_projects_recycler);
         mRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         mAdapter = new SmallProjectAdapter();
-        mAdapter.setProjects(mAllProjects);
+        mAdapter.setProjects(mDisplayProjects);
         mRecycler.setAdapter(mAdapter);
         /**/
         loadAllProjects();
         return view;
+    }
+
+    public void filterProjects(ProjectCategory projectCategory) {
+        mDisplayProjects = ProjectsManagement.filterProjects(mAllProjects, projectCategory);
+        mAdapter.setProjects(mDisplayProjects);
     }
 
     private void loadAllProjects() {
@@ -72,6 +82,7 @@ public class ProjectsFragment extends Fragment {
             return;
         }
         mAllProjects = projects;
+        mDisplayProjects = projects;
         mAdapter.setProjects(mAllProjects);
     }
 

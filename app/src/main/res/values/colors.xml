@@ -10,7 +10,7 @@
     <color name="item_project_small_divider">#ffffff</color>
 
     <color name="projects_fragment_background">#116c8d</color>
-
+    <color name="projects_fragment_selector">#29ffffff</color>
 
 
 </resources>

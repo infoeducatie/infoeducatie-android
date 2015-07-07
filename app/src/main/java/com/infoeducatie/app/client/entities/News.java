@@ -20,7 +20,7 @@ public class News implements Serializable {
 
     private String title;
 
-    private String pinned;
+    private boolean pinned;
 
     private String created_at;
 
@@ -56,11 +56,11 @@ public class News implements Serializable {
         this.title = title;
     }
 
-    public String getPinned() {
+    public boolean getPinned() {
         return pinned;
     }
 
-    public void setPinned(String pinned) {
+    public void setPinned(boolean pinned) {
         this.pinned = pinned;
     }
 

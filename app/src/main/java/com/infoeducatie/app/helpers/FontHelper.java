@@ -12,6 +12,9 @@ public class FontHelper {
     public static Typeface ROBOTO_REGULAR;
     public static Typeface ROBOTO_CONDENSED;
     public static Typeface ROBOTO_THIN;
+    public static Typeface LATO_BOLD;
+    public static Typeface LATO_LIGHT;
+    public static Typeface LATO_REGULAR;
 
 
     public static void load(Context context) {
@@ -19,5 +22,8 @@ public class FontHelper {
         ROBOTO_REGULAR = Typeface.createFromAsset(context.getAssets(), "Roboto-Regular.ttf");
         ROBOTO_CONDENSED = Typeface.createFromAsset(context.getAssets(), "Roboto-Condensed.ttf");
         ROBOTO_THIN = Typeface.createFromAsset(context.getAssets(), "Roboto-Thin.ttf");
+        LATO_BOLD = Typeface.createFromAsset(context.getAssets(), "lato-bold-webfont.ttf");
+        LATO_LIGHT = Typeface.createFromAsset(context.getAssets(), "lato-light-webfont.ttf");
+        LATO_REGULAR = Typeface.createFromAsset(context.getAssets(), "lato-regular-webfont.ttf");
     }
 }

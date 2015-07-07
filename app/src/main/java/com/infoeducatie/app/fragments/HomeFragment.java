@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
         mCountiesTitle = (TextView) view.findViewById(R.id.fragment_home_counties_title);
         mTitle = (TextView) view.findViewById(R.id.fragment_home_title);
         /* set fonts */
-        mMotto.setTypeface(FontHelper.ROBOTO_REGULAR);
+        mMotto.setTypeface(FontHelper.SHADOWS_INTO_LIGHT);
         mParticipantsNumber.setTypeface(FontHelper.ROBOTO_REGULAR);
         mProjectsNumber.setTypeface(FontHelper.ROBOTO_REGULAR);
         mCountiesNumber.setTypeface(FontHelper.ROBOTO_REGULAR);

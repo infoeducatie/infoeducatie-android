@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.helpers.FontHelper;
+import com.infoeducatie.app.ui.CircularImageView;
+import com.infoeducatie.app.ui.RoundedImageView;
 
 /**
  * Created by Browsing on 7/7/2015.

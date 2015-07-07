@@ -11,11 +11,11 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageView
+        <com.infoeducatie.app.ui.CircularImageView
             android:id="@+id/item_project_small_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/sample"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/sample"
             android:scaleType="centerCrop" />
 
         <LinearLayout

@@ -46,7 +46,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="@string/msg_participants_caps"
                 android:textColor="@color/home_fragment_text_primary"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/fragment_home_participants_number"
@@ -86,7 +86,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="@string/msg_projects_caps"
                 android:textColor="@color/home_fragment_text_primary"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/fragment_home_projects_number"
@@ -123,7 +123,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="@string/msg_counties_caps"
                 android:textColor="@color/home_fragment_text_primary"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/fragment_home_counties_number"

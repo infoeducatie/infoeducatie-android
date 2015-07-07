@@ -53,13 +53,13 @@ public class HomeFragment extends Fragment {
         mTitle = (TextView) view.findViewById(R.id.fragment_home_title);
         /* set fonts */
         mMotto.setTypeface(FontHelper.SHADOWS_INTO_LIGHT);
-        mParticipantsNumber.setTypeface(FontHelper.ROBOTO_REGULAR);
-        mProjectsNumber.setTypeface(FontHelper.ROBOTO_REGULAR);
-        mCountiesNumber.setTypeface(FontHelper.ROBOTO_REGULAR);
-        mEditionNumber.setTypeface(FontHelper.ROBOTO_REGULAR);
-        mProjectsTitle.setTypeface(FontHelper.ROBOTO_REGULAR);
-        mParticipantsTitle.setTypeface(FontHelper.ROBOTO_REGULAR);
-        mCountiesTitle.setTypeface(FontHelper.ROBOTO_REGULAR);
+        mParticipantsNumber.setTypeface(FontHelper.LATO_REGULAR);
+        mProjectsNumber.setTypeface(FontHelper.LATO_BOLD);
+        mCountiesNumber.setTypeface(FontHelper.LATO_BOLD);
+        mEditionNumber.setTypeface(FontHelper.LATO_BOLD);
+        mProjectsTitle.setTypeface(FontHelper.LATO_REGULAR);
+        mParticipantsTitle.setTypeface(FontHelper.LATO_REGULAR);
+        mCountiesTitle.setTypeface(FontHelper.LATO_REGULAR);
         mTitle.setTypeface(FontHelper.SHADOWS_INTO_LIGHT);
 
 

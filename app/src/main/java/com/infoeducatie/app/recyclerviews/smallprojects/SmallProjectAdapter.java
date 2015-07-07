@@ -1,0 +1,49 @@
+package com.infoeducatie.app.recyclerviews.smallprojects;
+
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.infoeducatie.app.R;
+import com.infoeducatie.app.client.entities.Project;
+
+/**
+ * Created by Browsing on 7/7/2015.
+ */
+public class SmallProjectAdapter extends RecyclerView.Adapter<SmallProjectViewHolder> {
+
+    private Project[] projects = new Project[0];
+
+    /* getters and setters for the projects */
+    public void setProjects(Project[] projects) {
+        this.projects = projects;
+        notifyDataSetChanged();
+    }
+
+    public Project[] getProjects() {
+        return projects;
+    }
+
+    /* */
+    @Override
+    public SmallProjectViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        /* create the view holder */
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_project_small, null);
+        SmallProjectViewHolder viewHolder = new SmallProjectViewHolder(view);
+        return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(SmallProjectViewHolder holder, int position) {
+     /* bind the viewholder item */
+        holder.title.setText(projects[position].getTitle());
+        holder.participants.setText("Nr:" + projects[position].getContestants().size());
+        holder.countycategory.setText(projects[position].getCounty() + " " + projects[position].getCategory());
+    }
+
+    @Override
+    public int getItemCount() {
+        return projects.length;
+    }
+}

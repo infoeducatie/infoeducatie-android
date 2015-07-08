@@ -15,4 +15,5 @@
     <string name="msg_more">MAI MULT</string>
     <string name="msg_less">MAI PUȚIN</string>
     <string name="msg_news_caps">ȘTIRI</string>
+    <string name="title_activity_news">Știri</string>
 </resources>

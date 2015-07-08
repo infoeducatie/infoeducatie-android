@@ -8,10 +8,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.client.entities.News;
+import com.infoeducatie.app.helpers.AsyncTaskHelper;
 import com.infoeducatie.app.recyclerviews.news.NewsAdapter;
+import com.infoeducatie.app.service.management.NewsManagement;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -44,8 +47,31 @@ public class NewsFragment extends Fragment {
         return view;
     }
 
+    /* get the news from the server */
     private void refreshNews() {
+        AsyncTaskHelper.create(new AsyncTaskHelper.AsyncMethods<News[]>() {
+            @Override
+            public News[] doInBackground() {
+                return NewsManagement.getAllNews();
+            }
 
+            @Override
+            public void onDone(News[] value, long ms) {
+                gotNews(value);
+
+            }
+
+
+        });
+    }
+
+    private void gotNews(News[] newses) {
+        if (newses == null) {
+            Toast.makeText(getActivity(), getActivity().getString(R.string.msg_con_error), Toast.LENGTH_SHORT).show();
+            return;
+        }
+        mNews = newses;
+        mAdapter.setNews(mNews);
     }
 
 

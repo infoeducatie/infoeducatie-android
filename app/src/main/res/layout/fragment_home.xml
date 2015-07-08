@@ -141,6 +141,20 @@
 
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/selector_fragment_home_button"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="10dp"
+        android:text="ȘTIRI (3)"
+        android:textColor="@color/home_fragment_text_primary"
+        android:textSize="25sp" />
+
+    <TextView
         android:id="@+id/fragment_home_edition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

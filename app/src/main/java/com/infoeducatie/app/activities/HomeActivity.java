@@ -1,5 +1,6 @@
 package com.infoeducatie.app.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -9,7 +10,7 @@ import com.infoeducatie.app.R;
 import com.infoeducatie.app.fragments.HomeFragment;
 
 
-public class HomeActivity extends ActionBarActivity {
+public class HomeActivity extends ActionBarActivity implements HomeFragment.HomeFragmentListener {
 
     private HomeFragment mHomeFragment;
 
@@ -19,6 +20,7 @@ public class HomeActivity extends ActionBarActivity {
         setContentView(R.layout.activity_home);
 
         mHomeFragment = (HomeFragment) getSupportFragmentManager().findFragmentById(R.id.activity_home_home_fragment);
+        mHomeFragment.setOnHomeFragmentListener(this);
     }
 
     @Override
@@ -56,5 +58,11 @@ public class HomeActivity extends ActionBarActivity {
         }
 */
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onNewsClicked() {
+        /* we clicked the news button , start news activity */
+        startActivity(new Intent(this,NewsActivity.class));
     }
 }

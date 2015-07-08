@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.infoeducatie.app.R;
+import com.infoeducatie.app.client.entities.ProjectCategory;
 import com.infoeducatie.app.fragments.ProjectsFragment;
 
 public class ProjectsActivity extends ActionBarActivity {
@@ -34,10 +35,27 @@ public class ProjectsActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+      
+        /* when the user clicks the settings */
+        if (id == R.id.action_all) {
+            mProjectsFragment.filterProjects(ProjectCategory.all);
         }
+        if (id == R.id.action_robots) {
+            mProjectsFragment.filterProjects(ProjectCategory.roboti);
+        }
+        if (id == R.id.action_web) {
+            mProjectsFragment.filterProjects(ProjectCategory.web);
+        }
+        if (id == R.id.action_educational) {
+            mProjectsFragment.filterProjects(ProjectCategory.educational);
+        }
+        if (id == R.id.action_utilitar) {
+            mProjectsFragment.filterProjects(ProjectCategory.utilitar);
+        }
+        if (id == R.id.action_media) {
+            mProjectsFragment.filterProjects(ProjectCategory.multimedia);
+        }
+ 
 
         return super.onOptionsItemSelected(item);
     }

@@ -2,11 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/news_fragment_background"
     tools:context="com.infoeducatie.app.fragments.NewsFragment">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/fragment_news_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
 
 </FrameLayout>

@@ -1,18 +1,23 @@
 package com.infoeducatie.app.activities;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.infoeducatie.app.R;
+import com.infoeducatie.app.fragments.NewsFragment;
 
 public class NewsActivity extends ActionBarActivity {
+
+    private NewsFragment mNewsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
+
+        mNewsFragment = (NewsFragment) getSupportFragmentManager().findFragmentById(R.id.activity_news_fragment);
     }
 
     @Override

@@ -68,4 +68,9 @@ public class HomeActivity extends ActionBarActivity implements HomeFragment.Home
         intent.putExtra("mNews", news);
         startActivity(intent);
     }
+
+    @Override
+    public void onStartProjects() {
+
+    }
 }

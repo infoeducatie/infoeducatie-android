@@ -11,9 +11,11 @@ import android.widget.Toast;
 
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.client.entities.Current;
+import com.infoeducatie.app.client.entities.News;
 import com.infoeducatie.app.helpers.AsyncTaskHelper;
 import com.infoeducatie.app.helpers.FontHelper;
 import com.infoeducatie.app.service.management.EditionManagement;
+import com.infoeducatie.app.service.management.NewsManagement;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -67,6 +69,7 @@ public class HomeFragment extends Fragment {
 
 
         loadInfo();
+        loadNews();
         return view;
     }
 
@@ -82,6 +85,32 @@ public class HomeFragment extends Fragment {
             @Override
             public void onDone(Current value, long ms) {
                 gotInfo(value);
+            }
+        });
+    }
+
+    /* load the news in order to display the news button */
+    private void loadNews() {
+        AsyncTaskHelper.create(new AsyncTaskHelper.AsyncMethods<News[]>() {
+
+            @Override
+            public News[] doInBackground() {
+                return NewsManagement.getAllNews();
+            }
+
+            @Override
+            public void onDone(News[] value, long ms) {
+                /* we got our news */
+                if (value != null && value.length > 0) {
+                    // we have news
+                    if (getActivity() != null) {
+                        mNewsButton.setText(getActivity().getString(R.string.msg_news_caps) + " (" + value.length + ")");
+                        mNewsButton.setVisibility(View.VISIBLE);
+                    }
+                } else {
+                    // no news
+                    mNewsButton.setVisibility(View.INVISIBLE);
+                }
             }
         });
     }

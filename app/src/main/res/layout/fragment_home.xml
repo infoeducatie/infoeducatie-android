@@ -34,7 +34,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal">
 
@@ -162,7 +162,8 @@
             android:paddingTop="9dp"
             android:text="ȘTIRI (3)"
             android:textColor="@color/home_fragment_text_primary"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:visibility="invisible" />
 
         <TextView
             android:id="@+id/fragment_home_edition"

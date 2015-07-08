@@ -11,14 +11,14 @@ import com.infoeducatie.app.fragments.ProjectsFragment;
 
 public class HomeActivity extends ActionBarActivity {
 
-    private ProjectsFragment projectsFragment;
+   // private ProjectsFragment projectsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        projectsFragment = (ProjectsFragment) getSupportFragmentManager().findFragmentById(R.id.fragment2);
+        //projectsFragment = (ProjectsFragment) getSupportFragmentManager().findFragmentById(R.id.fragment2);
     }
 
     @Override
@@ -36,7 +36,7 @@ public class HomeActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         /* when the user clicks the settings */
-        if (id == R.id.action_all) {
+      /*  if (id == R.id.action_all) {
             projectsFragment.filterProjects(ProjectCategory.all);
         }
         if (id == R.id.action_robots) {
@@ -54,7 +54,7 @@ public class HomeActivity extends ActionBarActivity {
         if (id == R.id.action_media) {
             projectsFragment.filterProjects(ProjectCategory.multimedia);
         }
-
+*/
         return super.onOptionsItemSelected(item);
     }
 }

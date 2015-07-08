@@ -24,6 +24,10 @@
             android:name=".activities.NewsActivity"
             android:label="@string/title_activity_news" >
         </activity>
+        <activity
+            android:name=".activities.ProjectsActivity"
+            android:label="@string/title_activity_projects" >
+        </activity>
     </application>
 
 </manifest>

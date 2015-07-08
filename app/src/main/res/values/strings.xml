@@ -16,4 +16,5 @@
     <string name="msg_less">MAI PUȚIN</string>
     <string name="msg_news_caps">ȘTIRI</string>
     <string name="title_activity_news">Știri</string>
+    <string name="title_activity_projects">Proiecte</string>
 </resources>

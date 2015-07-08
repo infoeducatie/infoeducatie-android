@@ -6,6 +6,7 @@
     tools:context="com.infoeducatie.app.activities.NewsActivity">
 
     <fragment
+        android:id="@+id/activity_news_fragment"
         android:name="com.infoeducatie.app.fragments.NewsFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

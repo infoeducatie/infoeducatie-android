@@ -31,6 +31,7 @@ public class HomeFragment extends Fragment {
     private TextView mCountiesTitle;
     private TextView mProjectsTitle;
     private TextView mTitle;
+    private TextView mNewsButton;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -51,6 +52,7 @@ public class HomeFragment extends Fragment {
         mParticipantsTitle = (TextView) view.findViewById(R.id.fragment_home_participants_title);
         mCountiesTitle = (TextView) view.findViewById(R.id.fragment_home_counties_title);
         mTitle = (TextView) view.findViewById(R.id.fragment_home_title);
+        mNewsButton = (TextView) view.findViewById(R.id.fragment_home_news_button);
         /* set fonts */
         mMotto.setTypeface(FontHelper.SHADOWS_INTO_LIGHT);
         mParticipantsNumber.setTypeface(FontHelper.LATO_BOLD);
@@ -61,6 +63,7 @@ public class HomeFragment extends Fragment {
         mParticipantsTitle.setTypeface(FontHelper.LATO_REGULAR);
         mCountiesTitle.setTypeface(FontHelper.LATO_REGULAR);
         mTitle.setTypeface(FontHelper.SHADOWS_INTO_LIGHT);
+        mNewsButton.setTypeface(FontHelper.ROBOTO_BOLD);
 
 
         loadInfo();

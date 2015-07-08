@@ -6,20 +6,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.infoeducatie.app.R;
-import com.infoeducatie.app.client.entities.ProjectCategory;
-import com.infoeducatie.app.fragments.ProjectsFragment;
+import com.infoeducatie.app.fragments.HomeFragment;
 
 
 public class HomeActivity extends ActionBarActivity {
 
-   // private ProjectsFragment projectsFragment;
+    private HomeFragment mHomeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        //projectsFragment = (ProjectsFragment) getSupportFragmentManager().findFragmentById(R.id.fragment2);
+        mHomeFragment = (HomeFragment) getSupportFragmentManager().findFragmentById(R.id.activity_home_home_fragment);
     }
 
     @Override

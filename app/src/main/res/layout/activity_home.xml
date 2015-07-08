@@ -6,7 +6,7 @@
 
 
     <fragment
-        android:id="@+id/fragment3"
+        android:id="@+id/activity_home_home_fragment"
         android:name="com.infoeducatie.app.fragments.HomeFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

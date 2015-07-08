@@ -20,6 +20,8 @@ public class News implements Serializable {
 
     private String title;
 
+    private boolean opened = false;
+
     private boolean pinned;
 
     private String created_at;
@@ -42,6 +44,14 @@ public class News implements Serializable {
 
     public String getBody() {
         return android.text.Html.fromHtml(body).toString();
+    }
+
+    public void setOpened(boolean opened) {
+        this.opened = opened;
+    }
+
+    public boolean isOpened() {
+        return opened;
     }
 
     public void setBody(String body) {

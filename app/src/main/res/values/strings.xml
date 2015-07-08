@@ -10,6 +10,8 @@
     <string name="msg_projects_caps">PROIECTE</string>
     <string name="msg_counties_caps">JUDEȚE</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="msg_more">MAI MULT</string>
+    <string name="msg_less">MAI PUȚIN</string>
 </resources>

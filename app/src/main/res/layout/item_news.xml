@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
 
                 android:paddingTop="10dp"
-                android:text="MAI MULT"
+                android:text="@string/msg_more"
                 android:textColor="@color/item_news_text_secondary"
                 android:textSize="16sp" />
         </LinearLayout>

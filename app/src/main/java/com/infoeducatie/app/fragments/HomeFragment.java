@@ -34,6 +34,7 @@ public class HomeFragment extends Fragment {
     private TextView mProjectsTitle;
     private TextView mTitle;
     private TextView mNewsButton;
+    private View mTableRoot;
 
     /* other */
     private HomeFragmentListener homeFragmentListener;
@@ -62,6 +63,7 @@ public class HomeFragment extends Fragment {
         mCountiesTitle = (TextView) view.findViewById(R.id.fragment_home_counties_title);
         mTitle = (TextView) view.findViewById(R.id.fragment_home_title);
         mNewsButton = (TextView) view.findViewById(R.id.fragment_home_news_button);
+        mTableRoot = view.findViewById(R.id.fragment_home_table_layout);
         /* set fonts */
         mMotto.setTypeface(FontHelper.SHADOWS_INTO_LIGHT);
         mParticipantsNumber.setTypeface(FontHelper.LATO_BOLD);
@@ -80,6 +82,14 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 if (homeFragmentListener != null) {
                     homeFragmentListener.onNewsClicked(mNews);
+                }
+            }
+        });
+        mTableRoot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (homeFragmentListener != null) {
+                    homeFragmentListener.onStartProjects();
                 }
             }
         });
@@ -149,5 +159,7 @@ public class HomeFragment extends Fragment {
 
     public static interface HomeFragmentListener {
         public void onNewsClicked(News[] news);
+
+        public void onStartProjects();
     }
 }

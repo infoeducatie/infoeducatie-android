@@ -15,6 +15,7 @@
     <color name="item_project_small_divider">#ffffff</color>
 
     <color name="item_news_text_primary">#696969</color>
+    <color name="item_news_text_secondary">#ffc000</color>
 
 
 </resources>

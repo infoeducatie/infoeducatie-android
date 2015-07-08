@@ -40,6 +40,16 @@
                 android:textColor="@color/item_news_text_primary"
                 android:textSize="14sp" />
 
+            <TextView
+
+                android:id="@+id/item_news_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:paddingTop="10dp"
+                android:text="MAI MULT"
+                android:textColor="@color/item_news_text_secondary"
+                android:textSize="16sp" />
         </LinearLayout>
 
 

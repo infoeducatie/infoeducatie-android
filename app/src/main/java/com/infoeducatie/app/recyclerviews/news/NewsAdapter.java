@@ -38,7 +38,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
     public void onBindViewHolder(NewsViewHolder holder, int position) {
      /* bind the viewholder item */
         holder.title.setText(news[position].getTitle());
-        holder.body.setText(news[position].getBody());
+        holder.body.setText(news[position].get_Short() + "...");
     }
 
     @Override

@@ -18,6 +18,7 @@ public class NewsActivity extends ActionBarActivity {
         setContentView(R.layout.activity_news);
 
         mNewsFragment = (NewsFragment) getSupportFragmentManager().findFragmentById(R.id.activity_news_fragment);
+
     }
 
     @Override

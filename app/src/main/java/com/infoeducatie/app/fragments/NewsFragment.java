@@ -1,7 +1,6 @@
 package com.infoeducatie.app.fragments;
 
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -31,6 +30,9 @@ public class NewsFragment extends Fragment {
         // Required empty public constructor
     }
 
+    public void setNews(News[] mNews) {
+        this.mNews = mNews;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,7 +46,10 @@ public class NewsFragment extends Fragment {
         mAdapter.setNews(mNews);
         mRecycler.setAdapter(mAdapter);
         /**/
-        refreshNews();
+        if (mNews.length == 0) {
+            /* we don't want to refresh if we already have news, on fragment create view */
+            refreshNews();
+        }
         return view;
     }
 

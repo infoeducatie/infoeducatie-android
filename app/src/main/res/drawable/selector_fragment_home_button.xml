@@ -5,14 +5,14 @@
     <item android:state_pressed="true">
         <shape>
             <solid android:color="@color/home_fragment_button_background_pressed" />
-            <corners android:radius="12dp" />
+            <corners android:radius="22dp" />
         </shape>
     </item>
 
     <item>
         <shape>
             <solid android:color="@color/home_fragment_button_background" />
-            <corners android:radius="12dp" />
+            <corners android:radius="22dp" />
         </shape>
     </item>
 </selector>

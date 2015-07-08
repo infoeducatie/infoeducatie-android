@@ -5,11 +5,9 @@
     tools:context=".HomeActivity">
 
 
-
-
     <fragment
         android:id="@+id/fragment3"
-        android:name="com.infoeducatie.app.fragments.NewsFragment"
+        android:name="com.infoeducatie.app.fragments.HomeFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

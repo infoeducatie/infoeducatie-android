@@ -155,7 +155,7 @@
         android:paddingTop="9dp"
         android:text="ȘTIRI (3)"
         android:textColor="@color/home_fragment_text_primary"
-        android:textSize="30sp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/fragment_home_edition"

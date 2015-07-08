@@ -1,4 +1,4 @@
-﻿# Info Educație Android App
+﻿# InfoEducație Android App
 
 Ce poți face momentan
 

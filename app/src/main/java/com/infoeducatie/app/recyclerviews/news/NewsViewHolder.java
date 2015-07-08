@@ -1,4 +1,4 @@
-package com.infoeducatie.app.recyclerviews.news.smallprojects;
+package com.infoeducatie.app.recyclerviews.news;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

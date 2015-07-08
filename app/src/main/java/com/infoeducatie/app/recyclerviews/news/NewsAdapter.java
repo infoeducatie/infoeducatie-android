@@ -1,4 +1,4 @@
-package com.infoeducatie.app.recyclerviews.news.smallnews;
+package com.infoeducatie.app.recyclerviews.news;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.client.entities.News;
-import com.infoeducatie.app.recyclerviews.news.smallprojects.NewsViewHolder;
 
 /**
  * Created by Browsing on 7/7/2015.

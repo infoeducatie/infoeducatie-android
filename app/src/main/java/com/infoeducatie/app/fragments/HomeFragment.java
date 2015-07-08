@@ -37,6 +37,7 @@ public class HomeFragment extends Fragment {
 
     /* other */
     private HomeFragmentListener homeFragmentListener;
+    private News[] mNews;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -78,7 +79,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (homeFragmentListener != null) {
-                    homeFragmentListener.onNewsClicked();
+                    homeFragmentListener.onNewsClicked(mNews);
                 }
             }
         });
@@ -117,6 +118,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onDone(News[] value, long ms) {
                 /* we got our news */
+                mNews = value;
                 if (value != null && value.length > 0) {
                     // we have news
                     if (getActivity() != null) {
@@ -146,6 +148,6 @@ public class HomeFragment extends Fragment {
 
 
     public static interface HomeFragmentListener {
-        public void onNewsClicked();
+        public void onNewsClicked(News[] news);
     }
 }

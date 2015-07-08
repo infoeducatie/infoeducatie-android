@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.infoeducatie.app.R;
+import com.infoeducatie.app.client.entities.News;
 import com.infoeducatie.app.fragments.HomeFragment;
 
 
@@ -61,8 +62,10 @@ public class HomeActivity extends ActionBarActivity implements HomeFragment.Home
     }
 
     @Override
-    public void onNewsClicked() {
+    public void onNewsClicked(News[] news) {
         /* we clicked the news button , start news activity */
-        startActivity(new Intent(this,NewsActivity.class));
+        Intent intent = new Intent(this, NewsActivity.class);
+        intent.putExtra("mNews", news);
+        startActivity(intent);
     }
 }

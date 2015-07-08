@@ -35,10 +35,16 @@ public class HomeFragment extends Fragment {
     private TextView mTitle;
     private TextView mNewsButton;
 
+    /* other */
+    private HomeFragmentListener homeFragmentListener;
+
     public HomeFragment() {
         // Required empty public constructor
     }
 
+    public void setOnHomeFragmentListener(HomeFragmentListener homeFragmentListener) {
+        this.homeFragmentListener = homeFragmentListener;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -66,6 +72,16 @@ public class HomeFragment extends Fragment {
         mCountiesTitle.setTypeface(FontHelper.LATO_REGULAR);
         mTitle.setTypeface(FontHelper.SHADOWS_INTO_LIGHT);
         mNewsButton.setTypeface(FontHelper.ROBOTO_BOLD);
+
+        /* events */
+        mNewsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (homeFragmentListener != null) {
+                    homeFragmentListener.onNewsClicked();
+                }
+            }
+        });
 
 
         loadInfo();
@@ -129,4 +145,7 @@ public class HomeFragment extends Fragment {
     }
 
 
+    public static interface HomeFragmentListener {
+        public void onNewsClicked();
+    }
 }

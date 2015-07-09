@@ -61,14 +61,5 @@ public class ProjectsManagement {
         return project.getCounty() + " / " + category;
     }
 
-    /* example */
-    public static void main(String[] args) {
-        Client client = new Client();
-        client.setHomeURL("http://api.dev.infoeducatie.ro/v1/");
-        Project[] projects = getAllProjects();
-        projects = filterProjects(projects, ProjectCategory.web);
-        for (Project project : projects) {
-            System.out.println(project.getCategory());
-        }
-    }
+    
 }

@@ -11,11 +11,5 @@ public class EditionManagement {
 		return ServiceLocator.getInstance().getClient().doGetRequest("current.json", Current.class);
 	}
 
-	/* example */
-	public static void main(String[] args) {
-		Client client = new Client();
-		client.setHomeURL("http://api.dev.infoeducatie.ro/v1/");
-		Current current = getEdition();
-		System.out.println(current.getStats().getTotal_participants());
-	}
+	
 }

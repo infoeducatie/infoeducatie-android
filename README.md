@@ -5,5 +5,9 @@ Ce poți face momentan
  * vezi detalii despre ediția curentă
  * vezi participanții și proiectele ediției curente
  * vezi ultimele știri
+ * vezi seminarele ediției curente
 
-Contributiile la proiect sunt apreciate.
+Contribuțiile la proiect sunt apreciate.
+
+Puteți testa aplicație direct de pe Google Play
+https://play.google.com/store/apps/details?id=com.infoeducatie.app

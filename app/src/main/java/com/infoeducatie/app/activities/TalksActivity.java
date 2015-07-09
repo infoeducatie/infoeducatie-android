@@ -17,8 +17,6 @@ public class TalksActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_talks);
 
-
-
     }
 
     @Override

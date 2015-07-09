@@ -1,6 +1,5 @@
 package com.infoeducatie.app.recyclerviews.talks;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,8 +37,6 @@ public class TalksAdapter extends RecyclerView.Adapter<TalksViewHolder> {
     @Override
     public void onBindViewHolder(final TalksViewHolder holder, final int position) {
      /* bind the viewholder item */
-        final Context context = holder.body.getContext();
-
         holder.title.setText(talks[position].getTitle());
         holder.body.setText(talks[position].getDescription());
         holder.location.setText(talks[position].getLocation());

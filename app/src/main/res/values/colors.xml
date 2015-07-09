@@ -18,5 +18,7 @@
     <color name="item_news_text_primary">#696969</color>
     <color name="item_news_text_secondary">#ffc000</color>
 
+    <color name="item_talk_text_primary">#696969</color>
+
 
 </resources>

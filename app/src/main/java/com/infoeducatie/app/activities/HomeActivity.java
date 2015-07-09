@@ -57,6 +57,7 @@ public class HomeActivity extends ActionBarActivity implements HomeFragment.Home
 
     @Override
     public void onStartTalks() {
-
+        Intent intent = new Intent(this, TalksActivity.class);
+        startActivity(intent);
     }
 }

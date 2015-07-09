@@ -16,7 +16,7 @@ public class TalksAdapter extends RecyclerView.Adapter<TalksViewHolder> {
     private Talk[] talks = new Talk[0];
 
     /* getters and setters for the news */
-    public void setNews(Talk[] talks) {
+    public void setTalks(Talk[] talks) {
         this.talks = talks;
         notifyDataSetChanged();
     }

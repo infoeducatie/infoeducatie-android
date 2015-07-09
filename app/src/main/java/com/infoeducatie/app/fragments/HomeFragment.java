@@ -161,5 +161,7 @@ public class HomeFragment extends Fragment {
         public void onNewsClicked(News[] news);
 
         public void onStartProjects();
+
+        public void onStartTalks();
     }
 }

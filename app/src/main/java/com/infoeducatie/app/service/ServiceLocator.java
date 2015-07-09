@@ -7,7 +7,7 @@ import com.infoeducatie.app.Client;
  */
 public class ServiceLocator {
 
-    public static String URL_ROOT = "http://api.dev.infoeducatie.ro/v1/";
+    public static String URL_ROOT = "http://api.infoeducatie.ro/v1/";
     private static ServiceLocator serviceLocator;
 
     public static ServiceLocator getInstance() {

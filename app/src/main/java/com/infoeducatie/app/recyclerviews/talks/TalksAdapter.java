@@ -37,11 +37,22 @@ public class TalksAdapter extends RecyclerView.Adapter<TalksViewHolder> {
     @Override
     public void onBindViewHolder(final TalksViewHolder holder, final int position) {
      /* bind the viewholder item */
+
+
         holder.title.setText(talks[position].getTitle());
         holder.body.setText(talks[position].getDescription());
         holder.location.setText(talks[position].getLocation());
         holder.date.setText(talks[position].getDate());
-        holder.person.setText(talks[position].getUser().getFirst_name() + " " + talks[position].getUser().getLast_name());
+        if (talks[position].getUser() != null) {
+            // we have a user
+            String person = talks[position].getUser().getFirst_name() + " " + talks[position].getUser().getLast_name();
+            if (talks[position].getUser().getJob() != null && talks[position].getUser().getJob().length() > 0) {
+                // we also have a job
+                person += ", " + talks[position].getUser().getJob();
+            }
+            holder.person.setText(person);
+
+        }
 
     }
 

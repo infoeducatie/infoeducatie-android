@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">InfoEducație</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
     <string name="msg_con_error">Eroare de conexiune</string>
@@ -11,12 +10,11 @@
     <string name="msg_counties_caps">JUDEȚE</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment!!</string>
     <string name="msg_more">MAI MULT</string>
     <string name="msg_less">MAI PUȚIN</string>
     <string name="msg_news_caps">ȘTIRI</string>
     <string name="title_activity_news">Știri</string>
     <string name="title_activity_projects">Proiecte</string>
     <string name="msg_talks_caps">SEMINARE</string>
-    <string name="title_activity_talks">TalksActivity</string>
+    <string name="title_activity_talks">Seminare</string>
 </resources>

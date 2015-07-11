@@ -41,30 +41,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
         final Context context = holder.body.getContext();
 
         holder.title.setText(news[position].getTitle());
-        if (!news[position].isOpened()) {
-            holder.button.setText(context.getString(R.string.msg_more));
-            holder.body.setText(news[position].get_Short() + "...");
-        } else {
-            holder.button.setText(context.getString(R.string.msg_less));
-            holder.body.setText(news[position].getBody());
-        }
-        holder.button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /* clicked the more button, switch state and change text*/
-                news[position].setOpened(!news[position].isOpened());
+        holder.body.setText(news[position].get_Short() + "...");
 
-                if (!news[position].isOpened()) {
-                    holder.button.setText(context.getString(R.string.msg_more));
-                    holder.body.setText(news[position].get_Short() + "...");
-                } else {
-                    holder.button.setText(context.getString(R.string.msg_less));
-                    holder.body.setText(news[position].getBody());
-                }
-            }
-        });
     }
-
 
 
     @Override

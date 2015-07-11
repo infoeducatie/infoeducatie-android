@@ -1,7 +1,6 @@
 package com.infoeducatie.app.fragments;
 
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,11 +8,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.client.entities.Talk;
 import com.infoeducatie.app.helpers.AsyncTaskHelper;
+import com.infoeducatie.app.helpers.UIMessageHelper;
 import com.infoeducatie.app.recyclerviews.talks.TalksAdapter;
 import com.infoeducatie.app.service.management.TalksManagement;
 
@@ -71,7 +70,7 @@ public class TalksFragment extends Fragment {
 
     private void gotTalks(Talk[] value) {
         if (value == null) {
-            Toast.makeText(getActivity(), getActivity().getString(R.string.msg_con_error), Toast.LENGTH_SHORT).show();
+            UIMessageHelper.showNetworkErrorMessage(getActivity());
             return;
         }
         mTalks = value;

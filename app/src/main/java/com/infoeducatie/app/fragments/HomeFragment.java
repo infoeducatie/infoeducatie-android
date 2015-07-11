@@ -14,6 +14,7 @@ import com.infoeducatie.app.client.entities.Current;
 import com.infoeducatie.app.client.entities.News;
 import com.infoeducatie.app.helpers.AsyncTaskHelper;
 import com.infoeducatie.app.helpers.FontHelper;
+import com.infoeducatie.app.helpers.UIMessageHelper;
 import com.infoeducatie.app.service.management.EditionManagement;
 import com.infoeducatie.app.service.management.NewsManagement;
 
@@ -156,7 +157,8 @@ public class HomeFragment extends Fragment {
 
     private void gotInfo(Current value) {
         if (value == null) {
-            Toast.makeText(getActivity(), getActivity().getString(R.string.msg_con_error), Toast.LENGTH_SHORT).show();
+            UIMessageHelper.showNetworkErrorMessage(getActivity());
+
         } else {
             // we got the current edition successfully
             mEditionNumber.setText(getActivity().getString(R.string.msg_edition) + " " + value.getEdition().getName());

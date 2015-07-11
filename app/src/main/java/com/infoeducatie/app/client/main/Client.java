@@ -1,4 +1,4 @@
-package com.infoeducatie.app;
+package com.infoeducatie.app.client.main;
 
 import com.infoeducatie.app.client.main.HttpHelper;
 

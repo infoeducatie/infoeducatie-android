@@ -15,8 +15,8 @@ public class ServiceLocator {
 
     public static ServiceLocator getInstance() {
         if (serviceLocator == null) {
-            serviceLocator = new ServiceLocator();
             URL_ROOT = BuildConfig.DEBUG ? URL_DEBUG : URL_RELEASE;
+            serviceLocator = new ServiceLocator();
         }
         return serviceLocator;
     }

@@ -40,8 +40,9 @@ public class WebViewDialogFragment extends DialogFragment {
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         View view = inflater.inflate(R.layout.fragment_web_view_dialog, container, false);
         mWebView = (WebView) view.findViewById(R.id.fragment_web_view_dialog_web_view);
+        mWebView.getSettings().setDefaultTextEncodingName("utf-8");
         if (html != null) {
-            mWebView.loadData(html, "text/html", "UTF-8");
+            mWebView.loadData(html, "text/html; charset=utf-8", "UTF-8");
         }
         return view;
     }

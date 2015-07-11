@@ -1,7 +1,8 @@
 package com.infoeducatie.app.service;
 
 import com.infoeducatie.app.BuildConfig;
-import com.infoeducatie.app.Client;
+import com.infoeducatie.app.client.main.Client;
+
 
 /**
  * Created by Browsing on 7/7/2015.

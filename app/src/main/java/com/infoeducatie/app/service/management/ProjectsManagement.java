@@ -1,7 +1,7 @@
 package com.infoeducatie.app.service.management;
 
 
-import com.infoeducatie.app.Client;
+
 import com.infoeducatie.app.client.entities.Project;
 import com.infoeducatie.app.client.entities.ProjectCategory;
 import com.infoeducatie.app.service.ServiceLocator;

@@ -1,6 +1,6 @@
 package com.infoeducatie.app.service.management;
 
-import com.infoeducatie.app.Client;
+
 
 import com.infoeducatie.app.client.entities.Current;
 import com.infoeducatie.app.service.ServiceLocator;

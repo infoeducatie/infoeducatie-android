@@ -1,6 +1,7 @@
 package com.infoeducatie.app.client.entities;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 /**
  * Created by Browsing on 7/9/2015.
@@ -12,7 +13,7 @@ public class Talk implements Serializable {
 
     private String description;
 
-    private String date;
+    private Timestamp date;
 
     private User user;
 
@@ -40,11 +41,11 @@ public class Talk implements Serializable {
         this.description = description;
     }
 
-    public String getDate() {
+    public Timestamp getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Timestamp date) {
         this.date = date;
     }
 

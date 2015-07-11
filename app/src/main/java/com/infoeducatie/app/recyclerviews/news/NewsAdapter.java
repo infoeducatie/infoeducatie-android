@@ -14,7 +14,12 @@ import com.infoeducatie.app.client.entities.News;
  */
 public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
 
+    private View.OnClickListener onClickListener;
     private News[] news = new News[0];
+
+    public void setOnClickListener(View.OnClickListener onClickListener) {
+        this.onClickListener = onClickListener;
+    }
 
     /* getters and setters for the news */
     public void setNews(News[] news) {
@@ -42,6 +47,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
 
         holder.title.setText(news[position].getTitle());
         holder.body.setText(news[position].get_Short() + "...");
+        holder.root.setOnClickListener(onClickListener);
 
     }
 
@@ -50,4 +56,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
     public int getItemCount() {
         return news.length;
     }
+
+
 }

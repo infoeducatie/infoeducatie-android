@@ -46,6 +46,9 @@ public class TalksAdapter extends RecyclerView.Adapter<TalksViewHolder> {
         holder.location.setText(talk.getLocation());
         if (talk.getDate() != null) {
             holder.date.setText(talk.getDate().toString());
+        } else {
+            holder.date.setText(null);
+
         }
         if (talk.getUser() != null) {
             // we have a user

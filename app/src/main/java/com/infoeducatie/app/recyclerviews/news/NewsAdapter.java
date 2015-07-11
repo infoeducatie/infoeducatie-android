@@ -47,7 +47,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
 
         holder.title.setText(news[position].getTitle());
         holder.body.setText(news[position].get_Short() + "...");
-        holder.root.setOnClickListener(onClickListener);
+        holder.root.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onClickListener != null) {
+                    onClickListener.onClick(news[position]);
+                }
+            }
+        });
 
     }
 

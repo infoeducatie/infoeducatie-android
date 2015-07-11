@@ -24,10 +24,10 @@ public class NewsFragment extends Fragment {
     private News[] mNews = new News[0];
 
     private NewsAdapter mAdapter;
-    private View.OnClickListener newsOnClickListener;
+    private NewsAdapter.NewsAdapterListener newsOnClickListener;
     private RecyclerView mRecycler;
 
-    public void setNewsOnClickListener(View.OnClickListener newsOnClickListener) {
+    public void setNewsOnClickListener(NewsAdapter.NewsAdapterListener newsOnClickListener) {
         this.newsOnClickListener = newsOnClickListener;
         if (mAdapter != null) {
             mAdapter.setOnClickListener(newsOnClickListener);

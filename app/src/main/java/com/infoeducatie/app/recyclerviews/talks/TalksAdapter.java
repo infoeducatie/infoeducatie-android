@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.client.entities.Talk;
+import com.infoeducatie.app.helpers.DateHelper;
 
 /**
  * Created by Browsing on 7/7/2015.
@@ -45,7 +46,7 @@ public class TalksAdapter extends RecyclerView.Adapter<TalksViewHolder> {
         holder.body.setText(talk.getDescription());
         holder.location.setText(talk.getLocation());
         if (talk.getDate() != null) {
-            holder.date.setText(talk.getDate().toString());
+            holder.date.setText(DateHelper.ISOFormatToString(talk.getDate()));
         } else {
             holder.date.setText(null);
 

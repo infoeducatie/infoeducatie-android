@@ -17,4 +17,7 @@
     <string name="title_activity_projects">Proiecte</string>
     <string name="msg_talks_caps">SEMINARE</string>
     <string name="title_activity_talks">Seminare</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

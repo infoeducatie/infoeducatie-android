@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.fragments.NewsFragment;
@@ -18,6 +19,12 @@ public class NewsActivity extends ActionBarActivity {
         setContentView(R.layout.activity_news);
 
         mNewsFragment = (NewsFragment) getSupportFragmentManager().findFragmentById(R.id.activity_news_fragment);
+        mNewsFragment.setNewsOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /* clicked a news item */
+            }
+        });
 
     }
 

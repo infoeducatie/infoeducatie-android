@@ -6,7 +6,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.infoeducatie.app.R;
+import com.infoeducatie.app.client.entities.News;
 import com.infoeducatie.app.fragments.NewsFragment;
+import com.infoeducatie.app.fragments.WebViewDialogFragment;
+import com.infoeducatie.app.recyclerviews.news.NewsAdapter;
 
 public class NewsActivity extends ActionBarActivity {
 
@@ -18,7 +21,16 @@ public class NewsActivity extends ActionBarActivity {
         setContentView(R.layout.activity_news);
 
         mNewsFragment = (NewsFragment) getSupportFragmentManager().findFragmentById(R.id.activity_news_fragment);
+        mNewsFragment.setNewsOnClickListener(new NewsAdapter.NewsAdapterListener() {
+            @Override
+            public void onClick(News news) {
+                if (news != null) {
+                    /* we clicked a news item */
+                    new WebViewDialogFragment().setHtml(news.getBody()).show(getSupportFragmentManager(), "tag");
+                }
+            }
 
+        });
     }
 
     @Override

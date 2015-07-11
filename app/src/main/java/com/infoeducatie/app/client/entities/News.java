@@ -43,7 +43,7 @@ public class News implements Serializable {
     }
 
     public String getBody() {
-        return android.text.Html.fromHtml(body).toString();
+        return body;
     }
 
     public void setOpened(boolean opened) {

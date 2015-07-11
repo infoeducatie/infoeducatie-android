@@ -14,7 +14,7 @@ public class NewsViewHolder extends RecyclerView.ViewHolder {
 
     public TextView title;
     public TextView body;
-    public TextView button;
+    public View root;
 
 
     public NewsViewHolder(View itemView) {
@@ -22,12 +22,11 @@ public class NewsViewHolder extends RecyclerView.ViewHolder {
 
         title = (TextView) itemView.findViewById(R.id.item_news_title);
         body = (TextView) itemView.findViewById(R.id.item_news_body);
-        button = (TextView) itemView.findViewById(R.id.item_news_button);
+        root = itemView.findViewById(R.id.item_news_root);
 
         /* set the typefaces */
         title.setTypeface(FontHelper.LATO_REGULAR);
         body.setTypeface(FontHelper.LATO_REGULAR);
-        button.setTypeface(FontHelper.ROBOTO_BOLD);
 
 
     }

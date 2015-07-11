@@ -14,7 +14,12 @@ import com.infoeducatie.app.client.entities.News;
  */
 public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
 
+    private NewsAdapterListener onClickListener;
     private News[] news = new News[0];
+
+    public void setOnClickListener(NewsAdapterListener onClickListener) {
+        this.onClickListener = onClickListener;
+    }
 
     /* getters and setters for the news */
     public void setNews(News[] news) {
@@ -41,34 +46,27 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
         final Context context = holder.body.getContext();
 
         holder.title.setText(news[position].getTitle());
-        if (!news[position].isOpened()) {
-            holder.button.setText(context.getString(R.string.msg_more));
-            holder.body.setText(news[position].get_Short() + "...");
-        } else {
-            holder.button.setText(context.getString(R.string.msg_less));
-            holder.body.setText(news[position].getBody());
-        }
-        holder.button.setOnClickListener(new View.OnClickListener() {
+        holder.body.setText(news[position].get_Short() + "...");
+        holder.root.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /* clicked the more button, switch state and change text*/
-                news[position].setOpened(!news[position].isOpened());
-
-                if (!news[position].isOpened()) {
-                    holder.button.setText(context.getString(R.string.msg_more));
-                    holder.body.setText(news[position].get_Short() + "...");
-                } else {
-                    holder.button.setText(context.getString(R.string.msg_less));
-                    holder.body.setText(news[position].getBody());
+                if (onClickListener != null) {
+                    onClickListener.onClick(news[position]);
                 }
             }
         });
-    }
 
+    }
 
 
     @Override
     public int getItemCount() {
         return news.length;
     }
+
+
+    public static interface NewsAdapterListener {
+        public void onClick(News news);
+    }
+
 }

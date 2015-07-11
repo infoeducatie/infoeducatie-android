@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.client.entities.News;
@@ -25,7 +24,15 @@ public class NewsFragment extends Fragment {
     private News[] mNews = new News[0];
 
     private NewsAdapter mAdapter;
+    private View.OnClickListener newsOnClickListener;
     private RecyclerView mRecycler;
+
+    public void setNewsOnClickListener(View.OnClickListener newsOnClickListener) {
+        this.newsOnClickListener = newsOnClickListener;
+        if (mAdapter != null) {
+            mAdapter.setOnClickListener(newsOnClickListener);
+        }
+    }
 
     public NewsFragment() {
         // Required empty public constructor
@@ -45,6 +52,7 @@ public class NewsFragment extends Fragment {
         mRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         mAdapter = new NewsAdapter();
         mAdapter.setNews(mNews);
+        mAdapter.setOnClickListener(newsOnClickListener);
         mRecycler.setAdapter(mAdapter);
         /**/
         if (mNews.length == 0) {

@@ -2,38 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.infoeducatie.app">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application>
 
-    <application
-
-        android:name=".activities.BaseApplication"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme">
         <meta-data
             android:name="server.root"
             android:value="http://api.infoeducatie.ro/v1/" />
-
-        <activity
-            android:name=".activities.HomeActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activities.NewsActivity"
-            android:label="@string/title_activity_news"></activity>
-        <activity
-            android:name=".activities.ProjectsActivity"
-            android:label="@string/title_activity_projects"></activity>
-        <activity
-            android:name=".activities.TalksActivity"
-            android:label="@string/title_activity_talks"></activity>
     </application>
 
 </manifest>

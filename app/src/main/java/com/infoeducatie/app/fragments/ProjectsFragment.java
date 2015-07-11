@@ -8,12 +8,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.client.entities.Project;
 import com.infoeducatie.app.client.entities.ProjectCategory;
 import com.infoeducatie.app.helpers.AsyncTaskHelper;
+import com.infoeducatie.app.helpers.UIMessageHelper;
 import com.infoeducatie.app.recyclerviews.smallprojects.SmallProjectAdapter;
 import com.infoeducatie.app.service.management.ProjectsManagement;
 
@@ -78,7 +78,7 @@ public class ProjectsFragment extends Fragment {
 
     private void gotProjects(Project[] projects) {
         if (projects == null) {
-            Toast.makeText(getActivity(), getActivity().getString(R.string.msg_con_error), Toast.LENGTH_SHORT).show();
+            UIMessageHelper.showNetworkErrorMessage(getActivity());
             return;
         }
         mAllProjects = projects;

@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.client.entities.News;
 import com.infoeducatie.app.helpers.AsyncTaskHelper;
+import com.infoeducatie.app.helpers.UIMessageHelper;
 import com.infoeducatie.app.recyclerviews.news.NewsAdapter;
 import com.infoeducatie.app.service.management.NewsManagement;
 
@@ -73,7 +74,8 @@ public class NewsFragment extends Fragment {
 
     private void gotNews(News[] newses) {
         if (newses == null) {
-            Toast.makeText(getActivity(), getActivity().getString(R.string.msg_con_error), Toast.LENGTH_SHORT).show();
+            UIMessageHelper.showNetworkErrorMessage(getActivity());
+
             return;
         }
         mNews = newses;

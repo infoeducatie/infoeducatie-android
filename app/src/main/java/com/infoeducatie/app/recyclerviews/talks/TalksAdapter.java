@@ -50,7 +50,6 @@ public class TalksAdapter extends RecyclerView.Adapter<TalksViewHolder> {
                 result += ", " + user.getJob();
             }
             result += "\n";
-
         }
         if (result.length() > 0) {
             /* removing last new line */
@@ -62,8 +61,6 @@ public class TalksAdapter extends RecyclerView.Adapter<TalksViewHolder> {
     @Override
     public void onBindViewHolder(final TalksViewHolder holder, final int position) {
      /* bind the viewholder item */
-
-
         Talk talk = talks[position];
 
         holder.title.setText(talk.getTitle());
@@ -73,11 +70,8 @@ public class TalksAdapter extends RecyclerView.Adapter<TalksViewHolder> {
             holder.date.setText(DateHelper.ISOFormatToString(talk.getDate()));
         } else {
             holder.date.setText(null);
-
         }
         holder.person.setText(usersToString(talk.getUsers()));
-
-
     }
 
 

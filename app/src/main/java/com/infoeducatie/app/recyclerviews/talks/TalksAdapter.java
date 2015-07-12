@@ -49,7 +49,11 @@ public class TalksAdapter extends RecyclerView.Adapter<TalksViewHolder> {
             if (user.getJob() != null && user.getJob().trim().length() > 0) {
                 result += ", " + user.getJob();
             }
-            result += "\n";
+
+        }
+        if (result.length() > 0) {
+            /* removing last new line */
+            result = result.substring(0, result.length() - 1);
         }
         return result;
     }

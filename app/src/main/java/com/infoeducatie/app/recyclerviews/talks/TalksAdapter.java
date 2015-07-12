@@ -49,6 +49,7 @@ public class TalksAdapter extends RecyclerView.Adapter<TalksViewHolder> {
             if (user.getJob() != null && user.getJob().trim().length() > 0) {
                 result += ", " + user.getJob();
             }
+            result += "\n";
 
         }
         if (result.length() > 0) {

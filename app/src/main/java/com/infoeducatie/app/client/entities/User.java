@@ -8,6 +8,8 @@ public class User implements Serializable {
 
     private String last_name;
 
+    private String name;
+
     private String job;
 
     private String email_md5;
@@ -42,6 +44,14 @@ public class User implements Serializable {
 
     public void setEmail_md5(String email_md5) {
         this.email_md5 = email_md5;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override

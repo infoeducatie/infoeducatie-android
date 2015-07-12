@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
-                android:text="Au început înscrierile!"
+                android:text="Title"
                 android:textColor="@color/item_talk_text_primary"
                 android:textSize="16sp" />
 
@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:alpha="0.8"
                 android:autoLink="web"
-                android:text="Echipa InfoEducație are plăcerea să vă anunțe, că astăzi luni 7 Iulie 2015 formularul destinat înscrierierii proiectelor în concurs a fost deschis. Pentru înscrierea în concurs vă rugăm să vă creați un cont nou, folosind formularul de înregistrare."
+                android:text="Description"
                 android:textColor="@color/item_talk_text_primary"
                 android:textSize="14sp" />
 
@@ -56,7 +56,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Cantina, Galaciuc"
+                    android:text=""
                     android:textColor="@color/item_talk_text_primary"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -77,7 +77,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="2/12/2990 10:34"
+                    android:text=""
                     android:textColor="@color/item_talk_text_primary"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -98,7 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Alexandru Coman"
+                    android:text=""
                     android:textColor="@color/item_talk_text_primary"
                     android:textSize="16sp" />
             </LinearLayout>

@@ -7,7 +7,10 @@ import android.view.ViewGroup;
 
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.client.entities.Talk;
+import com.infoeducatie.app.client.entities.User;
 import com.infoeducatie.app.helpers.DateHelper;
+
+import java.util.List;
 
 /**
  * Created by Browsing on 7/7/2015.
@@ -35,11 +38,29 @@ public class TalksAdapter extends RecyclerView.Adapter<TalksViewHolder> {
         return viewHolder;
     }
 
+    /* converts a list of users to string, ex: Nume Prenume, Job
+                                                Nume2 Prenume2 Job
+     */
+    public String usersToString(List<User> users) {
+        if (users == null) return null;
+        String result = "";
+        for (User user : users) {
+            result += user.getName();
+            if (user.getJob() != null && user.getJob().trim().length() > 0) {
+                result += ", " + user.getJob();
+            }
+            result += "\n";
+        }
+        if (result.length() > 0) {
+            /* removing last new line */
+            result = result.substring(0, result.length() - 1);
+        }
+        return result;
+    }
+
     @Override
     public void onBindViewHolder(final TalksViewHolder holder, final int position) {
      /* bind the viewholder item */
-
-
         Talk talk = talks[position];
 
         holder.title.setText(talk.getTitle());
@@ -49,19 +70,8 @@ public class TalksAdapter extends RecyclerView.Adapter<TalksViewHolder> {
             holder.date.setText(DateHelper.ISOFormatToString(talk.getDate()));
         } else {
             holder.date.setText(null);
-
         }
-        if (talk.getUser() != null) {
-            // we have a user
-            String person = talk.getUser().getFirst_name() + " " + talk.getUser().getLast_name();
-            if (talk.getUser().getJob() != null && talk.getUser().getJob().length() > 0) {
-                // we also have a job
-                person += ", " + talk.getUser().getJob();
-            }
-            holder.person.setText(person);
-
-        }
-
+        holder.person.setText(usersToString(talk.getUsers()));
     }
 
 

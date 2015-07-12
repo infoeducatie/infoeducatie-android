@@ -45,7 +45,7 @@ public class TalksAdapter extends RecyclerView.Adapter<TalksViewHolder> {
         if (users == null) return null;
         String result = "";
         for (User user : users) {
-            result += user.getFirst_name() + " " + user.getLast_name();
+            result += user.getName();
             if (user.getJob() != null && user.getJob().trim().length() > 0) {
                 result += ", " + user.getJob();
             }

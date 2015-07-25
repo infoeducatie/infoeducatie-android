@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.client.entities.Project;
 import com.infoeducatie.app.helpers.FontHelper;
+import com.infoeducatie.app.service.management.ProjectsManagement;
 import com.squareup.picasso.Picasso;
 
 /**
@@ -69,7 +70,8 @@ public class ProjectFragment extends Fragment {
 
     public void setProject(Project project) {
         if (mTitle == null) return;
-        /* views are null */
+        if (project == null) return;
+        /* views or projects are null */
         mTitle.setText(project.getTitle());
         /* if we have screenshots */
         if (project.getScreenshots() != null && project.getScreenshots().length > 0) {
@@ -80,6 +82,11 @@ public class ProjectFragment extends Fragment {
                     .into(mHeader);
         }
 
+        mContestants.setText(ProjectsManagement.getParticipantsFromProject(project).toUpperCase());
+        mExtra.setText(ProjectsManagement.getCountyAndCategoryString(project).toUpperCase());
+        mDescription.setText(project.getDescription());
+        mTehnicalDescription.setText(project.getTechnical_description());
+        mRequirements.setText(project.getSystem_requirements());
 
 
     }

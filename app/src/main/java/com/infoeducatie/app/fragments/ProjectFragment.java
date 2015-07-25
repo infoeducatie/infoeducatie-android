@@ -48,9 +48,9 @@ public class ProjectFragment extends Fragment {
         mTehnicalDescriptionTitle = (TextView) view.findViewById(R.id.fragment_project_tehnical_description_title);
         mRequirementsTitle = (TextView) view.findViewById(R.id.fragment_project_tehnical_requirements_title);
         /* bodies */
-        mDescription = (TextView) view.findViewById(R.id.fragment_project_description_title);
-        mTehnicalDescription = (TextView) view.findViewById(R.id.fragment_project_tehnical_description_title);
-        mRequirements = (TextView) view.findViewById(R.id.fragment_project_tehnical_requirements_title);
+        mDescription = (TextView) view.findViewById(R.id.fragment_project_description_content);
+        mTehnicalDescription = (TextView) view.findViewById(R.id.fragment_project_tehnical_description_content);
+        mRequirements = (TextView) view.findViewById(R.id.fragment_project_tehnical_requirements_content);
         /* icons*/
         mGithubIcon = view.findViewById(R.id.fragment_project_icon_github);
         mHomeIcon = view.findViewById(R.id.fragment_project_icon_home);

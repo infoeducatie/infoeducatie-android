@@ -1,192 +1,212 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/project_fragment_background"
-    android:scrollbars="none"
-    tools:context="com.infoeducatie.app.fragments.ProjectFragment">
+    android:background="@color/project_fragment_background">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/fragment_project_header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop" />
 
-        <ImageView
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_homepage"
-            android:id="@+id/fragment_project_header"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_gravity="center" />
-
-        <TextView
-            android:id="@+id/fragment_project_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/project_fragment_text_color"
-            android:textSize="25sp" />
-
-        <TextView
-            android:id="@+id/fragment_project_contestants"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textColor="@color/project_fragment_text_color"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/fragment_project_extra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textColor="@color/project_fragment_text_color"
-            android:textSize="16sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="@color/project_fragment_divider" />
-
-
-        <TextView
-            android:id="@+id/fragment_project_description_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="30dp"
-            android:text="@string/msg_description_caps"
-            android:textColor="@color/project_fragment_text_color"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/fragment_project_description_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:textColor="@color/project_fragment_text_color"
-            android:textSize="15sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="@color/project_fragment_divider" />
-
-        <TextView
-            android:id="@+id/fragment_project_tehnical_description_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="30dp"
-            android:text="@string/msg_tehnical_description_caps"
-            android:textColor="@color/project_fragment_text_color"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/fragment_project_tehnical_description_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:textColor="@color/project_fragment_text_color"
-            android:textSize="15sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="@color/project_fragment_divider" />
-
-        <TextView
-            android:id="@+id/fragment_project_tehnical_requirements_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="30dp"
-            android:text="@string/msg_requirements_caps"
-            android:textColor="@color/project_fragment_text_color"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/fragment_project_tehnical_requirements_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:textColor="@color/project_fragment_text_color"
-            android:textSize="15sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="@color/project_fragment_divider" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        tools:context="com.infoeducatie.app.fragments.ProjectFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginLeft="45dp"
-            android:layout_marginRight="45dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/fragment_project_icon_github"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="@drawable/selector_fragment_project"
-                android:clickable="true"
-                android:src="@drawable/ic_github" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <ImageView
-                android:id="@+id/fragment_project_icon_home"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:background="@drawable/selector_fragment_project"
-                android:clickable="true"
-                android:src="@drawable/ic_homepage" />
+                android:background="@android:color/transparent" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/project_fragment_background"
+                android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/fragment_project_icon_forum"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="@drawable/selector_fragment_project"
-                android:clickable="true"
-                android:src="@drawable/ic_forum" />
+                <TextView
+                    android:id="@+id/fragment_project_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/project_fragment_text_color"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/fragment_project_contestants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/project_fragment_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fragment_project_extra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/project_fragment_text_color"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:alpha="0.3"
+                    android:background="@color/project_fragment_divider" />
+
+
+                <TextView
+                    android:id="@+id/fragment_project_description_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/msg_description_caps"
+                    android:textColor="@color/project_fragment_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fragment_project_description_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/project_fragment_text_color"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+
+                    android:alpha="0.3"
+                    android:background="@color/project_fragment_divider" />
+
+                <TextView
+                    android:id="@+id/fragment_project_tehnical_description_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/msg_tehnical_description_caps"
+                    android:textColor="@color/project_fragment_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fragment_project_tehnical_description_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/project_fragment_text_color"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+
+                    android:alpha="0.3"
+                    android:background="@color/project_fragment_divider" />
+
+                <TextView
+                    android:id="@+id/fragment_project_tehnical_requirements_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/msg_requirements_caps"
+                    android:textColor="@color/project_fragment_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fragment_project_tehnical_requirements_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/project_fragment_text_color"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:alpha="0.3"
+                    android:background="@color/project_fragment_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/fragment_project_icon_github"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_fragment_project"
+                        android:clickable="true"
+                        android:src="@drawable/ic_github" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/fragment_project_icon_home"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_fragment_project"
+                        android:clickable="true"
+                        android:src="@drawable/ic_homepage" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/fragment_project_icon_forum"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_fragment_project"
+                        android:clickable="true"
+                        android:src="@drawable/ic_forum" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-</ScrollView>
+    </ScrollView>
+</RelativeLayout>

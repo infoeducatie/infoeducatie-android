@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/project_fragment_background"
+    android:scrollbars="none"
     tools:context="com.infoeducatie.app.fragments.ProjectFragment">
 
     <LinearLayout
@@ -49,7 +50,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="10dp"
-            android:alpha="0.5"
+            android:alpha="0.3"
             android:background="@color/project_fragment_divider" />
 
 
@@ -79,7 +80,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="10dp"
-            android:alpha="0.5"
+            android:alpha="0.3"
             android:background="@color/project_fragment_divider" />
 
         <TextView
@@ -108,7 +109,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="10dp"
-            android:alpha="0.5"
+            android:alpha="0.3"
             android:background="@color/project_fragment_divider" />
 
         <TextView
@@ -137,7 +138,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="10dp"
-            android:alpha="0.5"
+            android:alpha="0.3"
             android:background="@color/project_fragment_divider" />
 
         <LinearLayout
@@ -153,6 +154,7 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:background="@drawable/selector_fragment_project"
+                android:clickable="true"
                 android:src="@drawable/ic_github" />
 
             <View
@@ -166,6 +168,7 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:background="@drawable/selector_fragment_project"
+                android:clickable="true"
                 android:src="@drawable/ic_homepage" />
 
             <View
@@ -179,6 +182,7 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:background="@drawable/selector_fragment_project"
+                android:clickable="true"
                 android:src="@drawable/ic_forum" />
         </LinearLayout>
     </LinearLayout>

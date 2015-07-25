@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
 import com.infoeducatie.app.R;
+import com.infoeducatie.app.client.entities.Contestant;
+import com.infoeducatie.app.client.entities.Project;
+import com.infoeducatie.app.client.entities.ProjectCategory;
+import com.infoeducatie.app.client.entities.Screenshot;
 import com.infoeducatie.app.fragments.ProjectFragment;
 
 public class ProjectActivity extends ActionBarActivity {
@@ -15,6 +19,8 @@ public class ProjectActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project);
         mProjectFragment = (ProjectFragment) getSupportFragmentManager().findFragmentById(R.id.activity_project_fragment);
+
+
     }
 
 

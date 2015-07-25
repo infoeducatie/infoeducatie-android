@@ -12,6 +12,8 @@
         android:orientation="vertical">
 
         <ImageView
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_homepage"
             android:id="@+id/fragment_project_header"
             android:layout_width="match_parent"
             android:layout_height="150dp"
@@ -25,7 +27,7 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:textColor="@color/project_fragment_text_color"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/fragment_project_contestants"

@@ -159,6 +159,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
+                android:background="@drawable/selector_fragment_project"
                 android:src="@drawable/ic_github" />
 
             <View
@@ -168,10 +169,10 @@
 
             <ImageView
                 android:id="@+id/fragment_project_icon_home"
-
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
+                android:background="@drawable/selector_fragment_project"
                 android:src="@drawable/ic_homepage" />
 
             <View
@@ -184,6 +185,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
+                android:background="@drawable/selector_fragment_project"
                 android:src="@drawable/ic_forum" />
         </LinearLayout>
     </LinearLayout>

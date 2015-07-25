@@ -55,6 +55,12 @@ public class ProjectFragment extends Fragment {
         mTitle.setTypeface(FontHelper.SHADOWS_INTO_LIGHT);
         mContestants.setTypeface(FontHelper.ROBOTO_REGULAR);
         mExtra.setTypeface(FontHelper.ROBOTO_REGULAR);
+        mDescriptionTitle.setTypeface(FontHelper.ROBOTO_REGULAR);
+        mTehnicalDescriptionTitle.setTypeface(FontHelper.ROBOTO_REGULAR);
+        mRequirementsTitle.setTypeface(FontHelper.ROBOTO_REGULAR);
+        mDescription.setTypeface(FontHelper.LATO_LIGHT);
+        mTehnicalDescription.setTypeface(FontHelper.LATO_LIGHT);
+        mRequirements.setTypeface(FontHelper.LATO_LIGHT);
         return view;
     }
 

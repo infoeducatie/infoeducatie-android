@@ -10,7 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.infoeducatie.app.R;
+import com.infoeducatie.app.client.entities.Project;
 import com.infoeducatie.app.helpers.FontHelper;
+import com.squareup.picasso.Picasso;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,6 +64,24 @@ public class ProjectFragment extends Fragment {
         mTehnicalDescription.setTypeface(FontHelper.LATO_LIGHT);
         mRequirements.setTypeface(FontHelper.LATO_LIGHT);
         return view;
+    }
+
+
+    public void setProject(Project project) {
+        if (mTitle == null) return;
+        /* views are null */
+        mTitle.setText(project.getTitle());
+        /* if we have screenshots */
+        if (project.getScreenshots() != null && project.getScreenshots().length > 0) {
+            Picasso.with(mTitle.getContext())
+                    .load(project.getScreenshots()[0].getUrl())
+                    .placeholder(R.drawable.loading)
+                    .error(R.drawable.error)
+                    .into(mHeader);
+        }
+
+
+
     }
 
 

@@ -42,11 +42,18 @@ public class SmallProjectAdapter extends RecyclerView.Adapter<SmallProjectViewHo
         holder.title.setText(projects[position].getTitle());
         holder.participants.setText(ProjectsManagement.getParticipantsFromProject(projects[position]));
         holder.countycategory.setText(ProjectsManagement.getCountyAndCategoryString(projects[position]));
-        Picasso.with(holder.image.getContext())
-                .load(projects[position].getScreenshots().get(0).getUrl())
-                .placeholder(R.drawable.loading)
-                .error(R.drawable.error)
-                .into(holder.image);
+        /* check if project has images */
+        if (projects[position].getScreenshots() != null && projects[position].getScreenshots().length > 0) {
+            /* there are images, load the first one */
+            Picasso.with(holder.image.getContext())
+                    .load(projects[position].getScreenshots()[0].getUrl())
+                    .placeholder(R.drawable.loading)
+                    .error(R.drawable.error)
+                    .into(holder.image);
+        } else {
+            /* no images, empty the image view */
+            holder.image.setImageResource(R.drawable.transparent);
+        }
     }
 
     @Override

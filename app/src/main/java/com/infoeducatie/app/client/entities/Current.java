@@ -8,7 +8,7 @@ public class Current implements Serializable{
    	private Edition edition;
    	private boolean is_logged_in;
    	private Registration registration;
-   	private Stats stats;
+
    	private User user;
 
  	public Edition getEdition(){
@@ -29,12 +29,7 @@ public class Current implements Serializable{
 	public void setRegistration(Registration registration){
 		this.registration = registration;
 	}
- 	public Stats getStats(){
-		return this.stats;
-	}
-	public void setStats(Stats stats){
-		this.stats = stats;
-	}
+
  	public User getUser(){
 		return this.user;
 	}

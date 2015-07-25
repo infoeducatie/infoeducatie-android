@@ -11,6 +11,9 @@
     <color name="projects_fragment_selector">#29ffffff</color>
     <color name="project_fragment_background">#116c8d</color>
     <color name="project_fragment_selector">#29ffffff</color>
+    <color name="project_fragment_text_color">#ffffff</color>
+    <color name="project_fragment_divider">#ffffff</color>
+
 
     <color name="news_fragment_background">#ececec</color>
 

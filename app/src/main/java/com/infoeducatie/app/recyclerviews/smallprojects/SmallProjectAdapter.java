@@ -52,7 +52,7 @@ public class SmallProjectAdapter extends RecyclerView.Adapter<SmallProjectViewHo
                     .into(holder.image);
         } else {
             /* no images, empty the image view */
-            holder.image.setImageResource(android.R.color.transparent);
+            holder.image.setImageResource(R.drawable.transparent);
         }
     }
 

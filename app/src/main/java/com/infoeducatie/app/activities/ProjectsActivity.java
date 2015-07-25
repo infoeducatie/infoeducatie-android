@@ -1,5 +1,6 @@
 package com.infoeducatie.app.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -8,8 +9,9 @@ import android.view.MenuItem;
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.client.entities.ProjectCategory;
 import com.infoeducatie.app.fragments.ProjectsFragment;
+import com.infoeducatie.app.recyclerviews.smallprojects.SmallProjectAdapter;
 
-public class ProjectsActivity extends ActionBarActivity {
+public class ProjectsActivity extends ActionBarActivity implements SmallProjectAdapter.SmallProjectItemListener {
 
     private ProjectsFragment mProjectsFragment;
 
@@ -19,6 +21,7 @@ public class ProjectsActivity extends ActionBarActivity {
         setContentView(R.layout.activity_projects);
 
         mProjectsFragment = (ProjectsFragment) getSupportFragmentManager().findFragmentById(R.id.activity_projects_projects_fragment);
+        mProjectsFragment.setSmallProjectItemListener(this);
     }
 
     @Override
@@ -55,8 +58,16 @@ public class ProjectsActivity extends ActionBarActivity {
         if (id == R.id.action_media) {
             mProjectsFragment.filterProjects(ProjectCategory.multimedia);
         }
- 
+
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onProjectClicked(int id) {
+        /* we clicked the project with this id */
+        Intent intent = new Intent(this, ProjectActivity.class);
+        intent.putExtra("id", id);
+        startActivity(intent);
     }
 }

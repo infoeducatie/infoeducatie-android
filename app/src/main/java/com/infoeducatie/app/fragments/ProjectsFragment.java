@@ -31,6 +31,13 @@ public class ProjectsFragment extends Fragment {
     private SmallProjectAdapter mAdapter;
     private RecyclerView mRecycler;
 
+
+    private SmallProjectAdapter.SmallProjectItemListener smallProjectItemListener;
+
+    public void setSmallProjectItemListener(SmallProjectAdapter.SmallProjectItemListener smallProjectItemListener) {
+        this.smallProjectItemListener = smallProjectItemListener;
+    }
+
     public ProjectsFragment() {
         // Required empty public constructor
     }
@@ -47,6 +54,7 @@ public class ProjectsFragment extends Fragment {
         mRecycler = (RecyclerView) view.findViewById(R.id.fragment_projects_recycler);
         mRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         mAdapter = new SmallProjectAdapter();
+        mAdapter.setSmallProjectItemListener(smallProjectItemListener);
         mAdapter.setProjects(mDisplayProjects);
         mRecycler.setAdapter(mAdapter);
         /**/

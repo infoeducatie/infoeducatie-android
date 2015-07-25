@@ -23,7 +23,7 @@
     <string name="msg_description_caps">DESCRIERE</string>
     <string name="msg_tehnical_description_caps">DESCRIERE TEHNICĂ</string>
     <string name="msg_requirements_caps">CERINȚE</string>
-    <string name="title_activity_project">ProjectActivity</string>
+    <string name="title_activity_project">Detalii proiect</string>
 
     <string name="hello_world">Hello world!</string>
 </resources>

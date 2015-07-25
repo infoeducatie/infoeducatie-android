@@ -163,9 +163,9 @@ public class HomeFragment extends Fragment {
             // we got the current edition successfully
             mEditionNumber.setText(getActivity().getString(R.string.msg_edition) + " " + value.getEdition().getName());
             mMotto.setText(value.getEdition().getMotto());
-            mCountiesNumber.setText(value.getStats().getTotal_counties() + "");
-            mParticipantsNumber.setText(value.getStats().getTotal_participants() + "");
-            mProjectsNumber.setText(value.getStats().getTotal_projects() + "");
+            mCountiesNumber.setText(value.getEdition().getCounties_count() + "");
+            mParticipantsNumber.setText(value.getEdition().getContestants_count() + "");
+            mProjectsNumber.setText(value.getEdition().getProjects_count() + "");
         }
     }
 

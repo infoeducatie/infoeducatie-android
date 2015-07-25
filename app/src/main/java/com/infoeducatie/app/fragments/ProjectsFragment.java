@@ -36,6 +36,9 @@ public class ProjectsFragment extends Fragment {
 
     public void setSmallProjectItemListener(SmallProjectAdapter.SmallProjectItemListener smallProjectItemListener) {
         this.smallProjectItemListener = smallProjectItemListener;
+        if (mAdapter != null) {
+            mAdapter.setSmallProjectItemListener(smallProjectItemListener);
+        }
     }
 
     public ProjectsFragment() {

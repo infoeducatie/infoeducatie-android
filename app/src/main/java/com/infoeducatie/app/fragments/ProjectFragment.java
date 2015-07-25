@@ -1,7 +1,6 @@
 package com.infoeducatie.app.fragments;
 
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -28,6 +27,7 @@ public class ProjectFragment extends Fragment {
     private TextView mDescriptionTitle, mTehnicalDescriptionTitle, mRequirementsTitle;
     private TextView mDescription, mTehnicalDescription, mRequirements;
     private View mGithubIcon, mHomeIcon, mForumIcon;
+
 
     public ProjectFragment() {
         // Required empty public constructor

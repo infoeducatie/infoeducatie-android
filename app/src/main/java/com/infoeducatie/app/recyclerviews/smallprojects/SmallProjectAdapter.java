@@ -43,7 +43,7 @@ public class SmallProjectAdapter extends RecyclerView.Adapter<SmallProjectViewHo
         holder.participants.setText(ProjectsManagement.getParticipantsFromProject(projects[position]));
         holder.countycategory.setText(ProjectsManagement.getCountyAndCategoryString(projects[position]));
         Picasso.with(holder.image.getContext())
-                .load(projects[position].getScreenshots().get(0).getUrl())
+                .load(projects[position].getScreenshots()[0].getUrl())
                 .placeholder(R.drawable.loading)
                 .error(R.drawable.error)
                 .into(holder.image);

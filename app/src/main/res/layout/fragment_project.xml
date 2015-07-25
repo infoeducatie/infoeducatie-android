@@ -23,7 +23,6 @@
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:text="Messenger for desktop"
             android:textColor="@color/project_fragment_text_color"
             android:textSize="20sp" />
 
@@ -32,7 +31,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="BOLDIJAR PAUL\nPOPESCU DAN"
             android:textColor="@color/project_fragment_text_color"
             android:textSize="16sp" />
 
@@ -41,7 +39,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="NEAMT, UTILITAR"
             android:textColor="@color/project_fragment_text_color"
             android:textSize="16sp" />
 
@@ -72,7 +69,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:text="Messenger for Desktop este o aplicație simplă pentru Facebook Messenger . Este cross-platform deci funcționează pe OS X , Windows și Linux . Primește actualizări automate, are teme custom și poate fi pornită la startup."
             android:textColor="@color/project_fragment_text_color"
             android:textSize="15sp" />
 
@@ -98,12 +94,10 @@
 
         <TextView
             android:id="@+id/fragment_project_tehnical_description_content"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:text="Rulează pe NW.js (va fi portată pe Electron în curând) Site-ul este construit cu Jade, SASS, Gulp"
             android:textColor="@color/project_fragment_text_color"
             android:textSize="15sp" />
 
@@ -133,7 +127,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:text="Rulează pe NW.js (va fi portată pe Electron în curând) Site-ul este construit cu Jade, SASS, Gulp"
             android:textColor="@color/project_fragment_text_color"
             android:textSize="15sp" />
 

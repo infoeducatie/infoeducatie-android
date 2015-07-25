@@ -9,8 +9,8 @@ import com.infoeducatie.app.client.main.Client;
  */
 public class ServiceLocator {
 
-    public static final String URL_DEBUG = "http://api.dev.infoeducatie.ro/v1/";
-    public static final String URL_RELEASE = "http://api.infoeducatie.ro/v1/";
+    public static final String URL_DEBUG = "https://api.infoeducatie.ro/v1/";
+    public static final String URL_RELEASE = "https://api.infoeducatie.ro/v1/";
     public static String URL_ROOT = "-";
     private static ServiceLocator serviceLocator;
 

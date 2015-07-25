@@ -1,7 +1,6 @@
 package com.infoeducatie.app.service.management;
 
 
-
 import com.infoeducatie.app.client.entities.Project;
 import com.infoeducatie.app.client.entities.ProjectCategory;
 import com.infoeducatie.app.service.ServiceLocator;
@@ -15,6 +14,11 @@ public class ProjectsManagement {
     /* returns an array of all projects */
     public static Project[] getAllProjects() {
         return ServiceLocator.getInstance().getClient().doGetRequest("projects.json", Project[].class);
+    }
+
+    /* returns a project */
+    public static Project getProject(int id) {
+        return ServiceLocator.getInstance().getClient().doGetRequest("projects/" + id, Project.class);
     }
 
     /*
@@ -61,5 +65,5 @@ public class ProjectsManagement {
         return project.getCounty() + " / " + category;
     }
 
-    
+
 }

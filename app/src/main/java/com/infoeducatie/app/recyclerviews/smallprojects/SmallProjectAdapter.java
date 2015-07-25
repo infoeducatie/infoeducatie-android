@@ -16,11 +16,16 @@ import com.squareup.picasso.Picasso;
 public class SmallProjectAdapter extends RecyclerView.Adapter<SmallProjectViewHolder> {
 
     private Project[] projects = new Project[0];
+    private SmallProjectItemListener smallProjectItemListener;
 
     /* getters and setters for the projects */
     public void setProjects(Project[] projects) {
         this.projects = projects;
         notifyDataSetChanged();
+    }
+
+    public void setSmallProjectItemListener(SmallProjectItemListener smallProjectItemListener) {
+        this.smallProjectItemListener = smallProjectItemListener;
     }
 
     public Project[] getProjects() {
@@ -37,8 +42,17 @@ public class SmallProjectAdapter extends RecyclerView.Adapter<SmallProjectViewHo
     }
 
     @Override
-    public void onBindViewHolder(SmallProjectViewHolder holder, int position) {
+    public void onBindViewHolder(SmallProjectViewHolder holder, final int position) {
      /* bind the viewholder item */
+        holder.root.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /* we clicked a item */
+                if (smallProjectItemListener != null) {
+                    smallProjectItemListener.onProjectClicked(projects[position].getId());
+                }
+            }
+        });
         holder.title.setText(projects[position].getTitle());
         holder.participants.setText(ProjectsManagement.getParticipantsFromProject(projects[position]));
         holder.countycategory.setText(ProjectsManagement.getCountyAndCategoryString(projects[position]));
@@ -59,5 +73,9 @@ public class SmallProjectAdapter extends RecyclerView.Adapter<SmallProjectViewHo
     @Override
     public int getItemCount() {
         return projects.length;
+    }
+
+    public static interface SmallProjectItemListener {
+        public void onProjectClicked(int id);
     }
 }

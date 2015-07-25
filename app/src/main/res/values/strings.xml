@@ -20,4 +20,10 @@
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="msg_description_caps">DESCRIERE</string>
+    <string name="msg_tehnical_description_caps">DESCRIERE TEHNICĂ</string>
+    <string name="msg_requirements_caps">CERINȚE</string>
+    <string name="title_activity_project">Detalii proiect</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>

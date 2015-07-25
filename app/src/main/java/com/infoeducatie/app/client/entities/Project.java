@@ -74,13 +74,13 @@ public class Project {
 		return id;
 	}
 
-	private String category;
+	private ProjectCategory category;
 
- 	public void setCategory(String category) {
+ 	public void setCategory(ProjectCategory category) {
 		this.category = category;
 	}
 
-	public String getCategory() {
+	public ProjectCategory getCategory() {
 		return category;
 	}
 

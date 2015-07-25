@@ -41,13 +41,13 @@ public class ProjectsManagement {
 
     /* this method will return a string with all the participants */
     public static String getParticipantsFromProject(Project project) {
-        if (project.getContestants().size() == 1) {
-            return project.getContestants().get(0).getName();
+        if (project.getContestants().length == 1) {
+            return project.getContestants()[0].getName();
         }
         /* if we have more than 1 contestant, add them all into a string, separated by ',' */
-        String result = project.getContestants().get(0).getName();
-        for (int i = 1; i < project.getContestants().size(); i++) {
-            result += ", " + project.getContestants().get(i).getName();
+        String result = project.getContestants()[0].getName();
+        for (int i = 1; i < project.getContestants().length; i++) {
+            result += ", " + project.getContestants()[i].getName();
         }
         return result;
     }

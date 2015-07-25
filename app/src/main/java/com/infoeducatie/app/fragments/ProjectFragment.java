@@ -1,6 +1,8 @@
 package com.infoeducatie.app.fragments;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -27,6 +29,8 @@ public class ProjectFragment extends Fragment {
     private TextView mDescriptionTitle, mTehnicalDescriptionTitle, mRequirementsTitle;
     private TextView mDescription, mTehnicalDescription, mRequirements;
     private View mGithubIcon, mHomeIcon, mForumIcon;
+
+    private Project project;
 
 
     public ProjectFragment() {
@@ -65,13 +69,60 @@ public class ProjectFragment extends Fragment {
         mDescription.setTypeface(FontHelper.LATO_LIGHT);
         mTehnicalDescription.setTypeface(FontHelper.LATO_LIGHT);
         mRequirements.setTypeface(FontHelper.LATO_LIGHT);
+
+        /* events */
+        mGithubIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToUrl(project.getSource_url());
+            }
+        });
+        mHomeIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToUrl(project.getHomepage());
+            }
+        });
+        mForumIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToUrl(project.getDiscourse_url());
+            }
+        });
+
+        refreshIconsState();
         return view;
+    }
+
+    /* will reset the buttons state, visible / invisible */
+    private void refreshIconsState() {
+        if (mGithubIcon == null) return;
+        if (project == null) {
+            mGithubIcon.setVisibility(View.INVISIBLE);
+            mForumIcon.setVisibility(View.INVISIBLE);
+            mHomeIcon.setVisibility(View.INVISIBLE);
+            return;
+        }
+
+        /* if we have the urls make them visible if not invisible */
+        mGithubIcon.setVisibility((project.getSource_url() != null && project.getSource_url().length() > 0) ? View.VISIBLE : View.INVISIBLE);
+        mForumIcon.setVisibility((project.getDiscourse_url() != null && project.getDiscourse_url().length() > 0) ? View.VISIBLE : View.INVISIBLE);
+        mHomeIcon.setVisibility((project.getHomepage() != null && project.getHomepage().length() > 0) ? View.VISIBLE : View.INVISIBLE);
+
+    }
+
+    private void goToUrl(String url) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
     }
 
 
     public void setProject(Project project) {
         if (mTitle == null) return;
         if (project == null) return;
+        this.project = project;
         /* views or projects are null */
         mTitle.setText(project.getTitle());
         /* if we have screenshots */
@@ -88,6 +139,7 @@ public class ProjectFragment extends Fragment {
         mDescription.setText(project.getDescription());
         mTehnicalDescription.setText(project.getTechnical_description());
         mRequirements.setText(project.getSystem_requirements());
+        refreshIconsState();
 
 
     }

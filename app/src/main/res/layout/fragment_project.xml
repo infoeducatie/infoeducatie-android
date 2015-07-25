@@ -98,7 +98,6 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="10dp"
-
                     android:alpha="0.3"
                     android:background="@color/project_fragment_divider" />
 
@@ -175,7 +174,8 @@
                         android:layout_gravity="center"
                         android:background="@drawable/selector_fragment_project"
                         android:clickable="true"
-                        android:src="@drawable/ic_github" />
+                        android:src="@drawable/ic_github"
+                        android:visibility="invisible" />
 
                     <View
                         android:layout_width="0dp"
@@ -184,12 +184,14 @@
 
                     <ImageView
                         android:id="@+id/fragment_project_icon_home"
+
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:background="@drawable/selector_fragment_project"
                         android:clickable="true"
-                        android:src="@drawable/ic_homepage" />
+                        android:src="@drawable/ic_homepage"
+                        android:visibility="invisible" />
 
                     <View
                         android:layout_width="0dp"
@@ -198,12 +200,14 @@
 
                     <ImageView
                         android:id="@+id/fragment_project_icon_forum"
+
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:background="@drawable/selector_fragment_project"
                         android:clickable="true"
-                        android:src="@drawable/ic_forum" />
+                        android:src="@drawable/ic_forum"
+                        android:visibility="invisible" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

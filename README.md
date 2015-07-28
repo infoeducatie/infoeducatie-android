@@ -4,6 +4,7 @@ Ce poți face momentan
 
  * vezi detalii despre ediția curentă
  * vezi participanții și proiectele ediției curente
+ * vezi toate detaliile unui proiect, inclusiv screenshot-urile
  * vezi ultimele știri
  * vezi seminarele ediției curente
 

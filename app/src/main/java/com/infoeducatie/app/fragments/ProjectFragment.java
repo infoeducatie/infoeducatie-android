@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import com.infoeducatie.app.R;
 import com.infoeducatie.app.client.entities.Project;
 import com.infoeducatie.app.helpers.FontHelper;
+import com.infoeducatie.app.recyclerviews.horizontalimages.HorizontalImagesAdapter;
 import com.infoeducatie.app.service.management.ProjectsManagement;
 import com.squareup.picasso.Picasso;
 
@@ -29,8 +32,10 @@ public class ProjectFragment extends Fragment {
     private TextView mDescriptionTitle, mTehnicalDescriptionTitle, mRequirementsTitle;
     private TextView mDescription, mTehnicalDescription, mRequirements;
     private View mGithubIcon, mHomeIcon, mForumIcon;
+    private RecyclerView mImagesRecycler;
 
     private Project project;
+    private HorizontalImagesAdapter mAdapter;
 
 
     public ProjectFragment() {
@@ -43,6 +48,7 @@ public class ProjectFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_project, container, false);
+        mImagesRecycler = (RecyclerView) view.findViewById(R.id.fragment_project_recycler);
         mHeader = (ImageView) view.findViewById(R.id.fragment_project_header);
         mTitle = (TextView) view.findViewById(R.id.fragment_project_title);
         mContestants = (TextView) view.findViewById(R.id.fragment_project_contestants);
@@ -90,6 +96,13 @@ public class ProjectFragment extends Fragment {
             }
         });
 
+        /* load recycler view */
+        mImagesRecycler.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+        mAdapter = new HorizontalImagesAdapter();
+        if (project != null && project.getScreenshots() != null) {
+            mAdapter.setScreenshots(project.getScreenshots());
+        }
+        mImagesRecycler.setAdapter(mAdapter);
         refreshIconsState();
         return view;
     }
@@ -139,6 +152,7 @@ public class ProjectFragment extends Fragment {
         mDescription.setText(project.getDescription());
         mTehnicalDescription.setText(project.getTechnical_description());
         mRequirements.setText(project.getSystem_requirements());
+        mAdapter.setScreenshots(project.getScreenshots());
         refreshIconsState();
 
 

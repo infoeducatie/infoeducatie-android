@@ -64,7 +64,7 @@
                     android:layout_gravity="center_horizontal"
                     android:text="0"
                     android:textColor="@color/home_fragment_text_secondary"
-                    android:textSize="65sp" />
+                    android:textSize="63sp" />
 
             </LinearLayout>
 
@@ -101,7 +101,7 @@
                     android:layout_gravity="center_horizontal"
                     android:text="0"
                     android:textColor="@color/home_fragment_text_secondary"
-                    android:textSize="65sp" />
+                    android:textSize="63sp" />
 
             </LinearLayout>
 
@@ -138,7 +138,7 @@
                     android:layout_gravity="center_horizontal"
                     android:text="0"
                     android:textColor="@color/home_fragment_text_secondary"
-                    android:textSize="65sp" />
+                    android:textSize="63sp" />
 
             </LinearLayout>
 

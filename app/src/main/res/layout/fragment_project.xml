@@ -40,6 +40,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:paddingRight="3dp"
+                    android:paddingLeft="3dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:textColor="@color/project_fragment_text_color"
